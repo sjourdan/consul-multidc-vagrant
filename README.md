@@ -83,6 +83,7 @@ dc2-3  10.40.0.103:8301  alive   server  0.7.0  2         dc2
 
 Join every DC1 nodes:
 
+```
 $ docker exec -it consul consul join -wan 10.30.0.101 10.30.0.102 10.30.0.103
 Successfully joined cluster by contacting 3 nodes.
 
@@ -91,9 +92,11 @@ Node       Address           Status  Type    Build  Protocol  DC
 dc1-1.dc1  10.30.0.101:8302  alive   server  0.7.0  2         dc1
 dc1-2.dc1  10.30.0.102:8302  alive   server  0.7.0  2         dc1
 dc1-3.dc1  10.30.0.103:8302  alive   server  0.7.0  2         dc1
+```
 
 Join every DC2 nodes:
 
+```
 $ docker exec -it consul consul join -wan 10.40.0.101 10.40.0.102 10.40.0.103
 Successfully joined cluster by contacting 3 nodes.
 
@@ -105,3 +108,4 @@ dc1-3.dc1  10.30.0.103:8302  alive   server  0.7.0  2         dc1
 dc2-1.dc2  10.40.0.101:8302  alive   server  0.7.0  2         dc2
 dc2-2.dc2  10.40.0.102:8302  alive   server  0.7.0  2         dc2
 dc2-3.dc2  10.40.0.103:8302  alive   server  0.7.0  2         dc2
+```
